@@ -1,0 +1,57 @@
+import React, { Component } from 'react';
+
+class SearchBar extends Component {
+  render() {
+    return (<div className="form-group">
+        <label htmlFor="mainInput">Buscar</label>
+        <input
+          onInput={(event) => {
+            this.props.onSearch(event.target.value);
+          }}
+          //value={this.props.value}
+          type="text" 
+          className="form-control" 
+          id="mainInput" 
+          placeholder="Ingresa tu búsqueda..." />
+    </div>);
+  }
+}
+
+export default SearchBar;
+
+..........................................................................................................
+
+
+render() {
+    return (
+      <BrowserRouter>
+        <div className="App container">
+
+          <div className="row">
+            <div className="col">
+
+              <SearchBar
+                //value="hola"
+                onSearch={(value) => {
+                  console.log(value);
+                  this.searchByTitle(value);
+                }}
+                />
+
+            </div>
+          </div>
+
+          <Route path="/" exact 
+            render={() => <Results movies={this.state.results} />} />
+          {/*<Results movies={this.state.results} />*/}
+
+          <Route path="/pelicula/:movieId" component={Movie} />
+          
+
+        </div>
+      </BrowserRouter>
+    );
+  }
+
+
+  anexo import { BrowserRouter, Route } from 'react-router-dom';

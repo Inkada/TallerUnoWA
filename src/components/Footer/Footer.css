@@ -1,4 +1,8 @@
-.Footer{
+.FooterFondo{
   background-color: black;
+
 }
 
+.Footer{
+  margin: 0 10%  0 10%;
+}

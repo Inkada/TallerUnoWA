@@ -7,11 +7,9 @@ class Store extends Component{
         return <div>
             <h1>Store page</h1>
 
-            <Filters />
-            <Filters />
+             <Filters />
 
-            <p>productos</p>
-        </div>
+             </div>
     }
 }
 

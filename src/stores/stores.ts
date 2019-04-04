@@ -4,6 +4,8 @@ import api from '../utils/api';
 
 export type depsArray = { name: string, department_id: number }[];
 export type catsArray = { name: string, category_id: number, department_id: number }[];
+export type proArray = { name: string, product_id: number, description: string , price: number, discounted_price:number,thumbnail: string }[];
+
 
 class Store {
 
@@ -11,13 +13,17 @@ class Store {
     @observable loadingDeps: boolean = false;
 
     @observable categories: catsArray|null|false = null;
+    @observable products: catsArray|null|false = null;
+
 
     @observable currentDept: number|null = null;
     @observable currentCat: number|null = null;
+    @observable currentPro: number|null = null;
 
     @computed get pageTitle(){
         var dep = this.departments && this.departments.find(e => e.department_id == this.currentDept);
         var cat = this.categories && this.categories.find(e => e.category_id == this.currentCat);
+        //var pro = this.products && this.products.find(e => e.product_id == this.currentPro);
 
         var res = `${dep ? dep.name : ''} ${cat ? ' - ' + cat.name : ''}`;
         return res;

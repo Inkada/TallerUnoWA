@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import NavBar from '../NavBar/NavBar';
-import store from '../../stores/stores';
+import DepartmentsMenu from '../DepartmentsMenu/DepartmentsMenu';
 
 
-class Footer extends Component{
 
-      render(){
-        return <div className="Footer">
+class Footer extends Component {
 
-            <NavBar />
+    render() {
+        return <div className="FooterFondo">
 
+            <div className="FooterFondo">
+                <DepartmentsMenu />
+            </div>
         </div>
     }
 }
