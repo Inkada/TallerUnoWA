@@ -1,0 +1,21 @@
+.Products{
+    margin: 0 10%;
+    display: grid;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+ 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    padding: 8px;
+}
+.Products_Contenedor{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+ 
+   
+}

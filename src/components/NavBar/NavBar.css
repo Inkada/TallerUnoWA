@@ -1,5 +1,27 @@
 .NavBar{
-    display: flex;
-     flex-direction: row;
+   margin: 0;
+     background-color: black;
+
      
+}
+
+.NavBar_Contenido{
+    justify-content: space-around;
+    display: flex;
+
+    flex-direction: row;
+    margin: 0% 10% 10 10%;
+    
+    
+    
+}
+
+.Logo{
+    width: 17.6%;
+    height: 90.86431%;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #f62f5e;
+    margin-right: 5%;
+
 }

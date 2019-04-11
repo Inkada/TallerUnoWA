@@ -11,10 +11,12 @@ const NavBar = () => {
     if(!store.departments) return <p>Cargando...</p>;
 
     return <nav className="NavBar">
-        <div>Hola</div>
+    <div className="NavBar_Contenido">
+        <div className="Logo">SHOPMATE</div>
         <DepartmentsMenu />
         <SearchBar/>
         <button></button>
+        </div>
     </nav>;
 }
 
