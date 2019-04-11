@@ -33,8 +33,32 @@ function getProducts(callback: (result: proArray) => void){
         });
 }
 
+function getProductsDep(callback: (result: proArray) => void){
+    fetch(`${apiRoot}/products/inDepartment/${getDepartments}`)
+        .then(( rawInfo ) => {
+            return rawInfo.json();
+        })
+        .then(( products ) => {
+            callback(products.rows);
+        });
+}
+
+function getProductsCat(callback: (result: proArray) => void){
+    fetch(`${apiRoot}/products/inCategory/${getCategories}`)
+        .then(( rawInfo ) => {
+            return rawInfo.json();
+        })
+        .then(( products ) => {
+            callback(products.rows);
+        });
+}
+
+
 export default {
     getDepartments,
     getCategories,
-    getProducts
+    getProducts,
+    getProductsDep,
+    getProductsCat,
+
 };
